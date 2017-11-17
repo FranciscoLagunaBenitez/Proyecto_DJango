@@ -1,0 +1,22 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h1><a href="/">Videogames Codex</a></h1>
+
+<h2>{{title}}</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+    </tr>
+    {% for game in games %}
+    <tr>
+        <td>{{game.name}}</td>
+        <td>{{game.score}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
